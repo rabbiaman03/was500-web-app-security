@@ -1,7 +1,5 @@
-# Lab Submission Template
-## Title: Lab 05 - Client-Side Validation and UX
-- **Name**: Rabbi Muhammad Aman
-- 
+# Lab 05 - Client-Side Validation and UX
+- **Author**: Rabbi Muhammad Aman
 - **Date**: 2026-10-11
 
 ---

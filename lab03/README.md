@@ -1,7 +1,5 @@
-# Lab Submission Template
-## Title: Lab 03 - Interactive Web Pages with JavaScript Basics
-- **Name**: Rabbi Muhammad Aman
-- 
+# Lab 03 - Interactive Web Pages with JavaScript Basics
+- **Author**: Rabbi Muhammad Aman
 - **Date**: 2026-10-01
 ---
 ## Table of Contents

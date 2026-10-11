@@ -1,6 +1,5 @@
 # WAS500 Lab 01 - Building First Web Pages with HTML & CSS
-- **Name**: Rabbi Muhammad Aman
-- 
+- **Author**: Rabbi Muhammad Aman
 - **Date**: 2026-09-16
 ---
 ## Table of Contents
@@ -57,8 +56,6 @@ The computer asked a DNS server (10.101.100.21) to find the IP address of www.se
 ## Part A — Step 2: Request and Response
 ### Number of entries and what that means and request/response cycle explanation 
 There are exactly 151 separate requests that appeared in the network list. This shows that a single web page is not just one file, but is actually made from dozens of individual components for example, HTML, scripts, stylesheets that must all be fetched separately. When the page was reloaded, my web browser (the client) sent an HTTP GET request over the network to Seneca Polytechnic's web server (the server). The server processed this request and sent back an HTTP response containing the initial HTML document. Finally, the client parsed this HTML document and automatically sent additional requests to the server to retrieve the remaining files needed to fully render the page.
-
-
 
 ## Part B — List justifications (2.16)
 

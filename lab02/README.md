@@ -1,6 +1,5 @@
-## Title: Lab 02 - Responsive Layouts and Accessible Pages
-- **Name**: Rabbi Muhammad Aman
-- 
+# Lab 02 - Responsive Layouts and Accessible Pages
+- **Author**: Rabbi Muhammad Aman
 - **Date**: 2026-09-23
 ---
 ## Table of Contents
@@ -81,7 +80,6 @@ The page level layout employs **Grid** as all of the header, nav, main, aside, a
 2. Home (nav)
 3. Legends (nav)
 4. About (nav)
-
 
 ### Analysis (2.23)
 The order of focus was a logical one to begin with, as it proceeded in a top-down manner following the order in which the elements occurred in the HTML source code. In that case, since I created the HTML code in the same order in which it appeared visually, and since the CSS Grid code only changed the placement of `aside` in the visual space on wider screens without moving it in the source code, the visual order did not conflict with the tab order. The skip link occurs first in the `<body>` tag and is therefore always focused on first regardless of screen size.

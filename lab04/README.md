@@ -1,7 +1,5 @@
-# Lab Submission Template
-## Title: Lab 04 - Dynamic Page Updates with DOM and Events
-- **Name**: Rabbi Muhammad Aman
-- 
+# Lab 04 - Dynamic Page Updates with DOM and Events
+- **Author**: Rabbi Muhammad Aman
 - **Date**: 2026-10-04
 ---
 ## Table of Contents
