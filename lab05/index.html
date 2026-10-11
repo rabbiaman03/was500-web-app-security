@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipher Legends</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <h1>Cipher Legends</h1>
+  </header>
+
+  <nav role="navigation" aria-label="Main">
+    <ul>
+      <li><a href="#main">Home</a></li>
+      <li><a href="#legends">Legends</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#join">Join</a></li>
+      <li><a href="#did-you-know">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section id="legends" aria-labelledby="legends-heading">
+      <h2 id="legends-heading" class="section-title">Six Figures Who Shaped Security</h2>
+      <div class="gallery" id="gallery">
+        <article class="card" tabindex="0">
+          <h2>Alan Turing</h2>
+          <p class="era">1912–1954</p>
+          <p>Breaking the Enigma cipher at Bletchley Park.</p>
+          <p>His work proved that machine-scale attacks could break ciphers,a lesson that still sets the bar for how strong modern encryption has to be.</p>
+          <p class="field">Cryptanalysis</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h2>Claude Shannon</h2>
+          <p class="era">1916–2001</p>
+          <p>Founding information theory.</p>
+          <p>His mathematical definition of perfect secrecy is the piller of every cipher. From one-time pads to modern block ciphers it is still measured against.</p>
+          <p class="field">Information Theory</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h2>Grace Hopper</h2>
+          <p class="era">1906–1992</p>
+          <p>Compilers, and popularising the term "debugging".</p>
+          <p>By making it possible to write software in readable language instead of raw machine code, she made securable software possible at all.</p>
+          <p class="field">Programming Languages</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h2>Elizebeth Smith Friedman</h2>
+          <p class="era">1892–1980</p>
+          <p>Breaking smuggling and spy ciphers for the US Coast Guard.</p>
+          <p>She showed that cryptanalysis could stand up as courtroom evidence and trained the generation of codebreakers who carried her methods into later intelligence work.</p>
+          <p class="field">Cryptanalysis</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h2>Whitfield Diffie</h2>
+          <p class="era">b. 1944</p>
+          <p>Co-inventing public-key exchange.</p>
+          <p>His idea let two strangers agree on a shared secret over a public channel, which is the reason every HTTPS connection today works without a pre-shared key.</p>
+          <p class="field">Public-Key Cryptography</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h2>Martin Hellman</h2>
+          <p class="era">b. 1945</p>
+          <p>Co-inventing public-key exchange.</p>
+          <p>Beyond the algorithm itself, he spent decades publicly arguing for stronger key lengths and against weakening encryption. </p>
+          <p class="field">Public-Key Cryptography</p>
+        </article>
+      </div>
+      <button type="button" id="toggleBtn" class="btn">Hide Legends</button>
+    </section>
+
+    <section id="research" class="research" aria-labelledby="research-heading">
+      <h2 id="research-heading" class="section-title">Research Assignments</h2>
+      <p>Click a legend card above, then choose an assignment from the list or the dropdown.</p>
+
+      <ul id="assignmentList" class="assignment-list" aria-label="Research assignments"></ul>
+
+      <div class="tool">
+        <label for="assignmentSelect">Assignment:</label>
+        <select id="assignmentSelect"></select>
+      </div>
+
+      <div class="tool">
+        <button type="button" id="startBtn" class="btn">Start Research</button>
+        <p id="researchLog" class="result research-log" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="tools" class="tools" aria-labelledby="tools-heading">
+      <h2 id="tools-heading" class="section-title">Explore the Collection</h2>
+
+      <div class="tool">
+        <label for="legendSearch">Search for a legend:</label>
+        <input type="text" id="legendSearch">
+        <button type="button" id="searchBtn" class="btn">Search</button>
+        <p id="searchResult" class="result" aria-live="polite"></p>
+      </div>
+
+      <div class="tool">
+        <button type="button" id="summaryBtn" class="btn">Summarise Fields</button>
+        <p id="summaryResult" class="result" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="join" class="join" aria-labelledby="join-heading">
+      <h2 id="join-heading" class="section-title">Join the Archive</h2>
+      <p>Register as a contributor. Fields marked <span aria-hidden="true">*</span> are required.
+        This form does not send anything yet, so do not use a real password.</p>
+
+      <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+      <form id="joinForm" class="contributor-form" novalidate>
+        <!-- 1. Full Name -->
+        <div class="form-group">
+          <label for="fullName">
+            Full name <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            required
+            minlength="2"
+            autocomplete="name"
+            placeholder="e.g. Alan Turing"
+            aria-describedby="fullNameError"
+          />
+          <span id="fullNameError" class="field-error" aria-live="polite"></span>
+        </div>
+
+        <!-- 2. Email -->
+        <div class="form-group">
+          <label for="email">
+            Email <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="e.g. aturing@archive.org"
+            aria-describedby="emailError"
+          />
+          <span id="emailError" class="field-error" aria-live="polite"></span>
+        </div>
+
+        <!-- 3. Password -->
+        <div class="form-group">
+          <label for="password">
+            Password <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="10"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9\s]).{10,}"
+            autocomplete="new-password"
+            placeholder="Minimum 10 characters"
+            aria-describedby="passwordError passwordRequirements"
+          />
+          <span id="passwordError" class="field-error" aria-live="polite"></span>
+
+          <!-- Live Password Requirements Tracker (Step 5.15e) -->
+          <div id="passwordRequirements" class="password-checklist" aria-label="Password character requirements">
+            <span class="checklist-title">Password must include:</span>
+            <ul class="checklist-items">
+              <li id="reqLength" class="criteria-item invalid">
+                <span class="status-marker" aria-hidden="true">&#x2715;</span> At least 10 characters
+              </li>
+              <li id="reqUpper" class="criteria-item invalid">
+                <span class="status-marker" aria-hidden="true">&#x2715;</span> At least one uppercase letter (A&ndash;Z)
+              </li>
+              <li id="reqLower" class="criteria-item invalid">
+                <span class="status-marker" aria-hidden="true">&#x2715;</span> At least one lowercase letter (a&ndash;z)
+              </li>
+              <li id="reqNumber" class="criteria-item invalid">
+                <span class="status-marker" aria-hidden="true">&#x2715;</span> At least one number (0&ndash;9)
+              </li>
+              <li id="reqSymbol" class="criteria-item invalid">
+                <span class="status-marker" aria-hidden="true">&#x2715;</span> At least one symbol (e.g. ! @ # $ % &amp;)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPassword">
+            Confirm password <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            autocomplete="new-password"
+            placeholder="Re-enter your password"
+            aria-describedby="confirmPasswordError"
+          />
+          <span id="confirmPasswordError" class="field-error" aria-live="polite"></span>
+        </div>
+
+        <!-- 5. Year of Study -->
+        <div class="form-group">
+          <label for="yearOfStudy">
+            Year of study <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="number"
+            id="yearOfStudy"
+            name="yearOfStudy"
+            required
+            min="1"
+            max="6"
+            step="1"
+            placeholder="1 to 6"
+            aria-describedby="yearOfStudyError"
+          />
+          <span id="yearOfStudyError" class="field-error" aria-live="polite"></span>
+        </div>
+
+        <!-- 6. Area of Interest -->
+        <div class="form-group">
+          <label for="interest">
+            Area of interest <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <select
+            id="interest"
+            name="interest"
+            required
+            aria-describedby="interestError"
+          >
+            <option value="">Select an area of interest...</option>
+            <option value="Cryptanalysis">Cryptanalysis</option>
+            <option value="Information Theory">Information Theory</option>
+            <option value="Public-Key Cryptography">Public-Key Cryptography</option>
+            <option value="Applied Cryptography">Applied Cryptography</option>
+          </select>
+          <span id="interestError" class="field-error" aria-live="polite"></span>
+        </div>
+
+        <!-- 7. Why You Are Joining -->
+        <div class="form-group">
+          <label for="motivation">
+            Why you are joining <span class="required-indicator" aria-hidden="true">*</span>
+          </label>
+          <textarea
+            id="motivation"
+            name="motivation"
+            required
+            minlength="30"
+            rows="4"
+            placeholder="Tell us what draws you to cryptographic archives (minimum 30 characters)..."
+            aria-describedby="motivationError motivationCounter"
+          ></textarea>
+          <div class="textarea-footer">
+            <span id="motivationError" class="field-error" aria-live="polite"></span>
+            <span id="motivationCounter" class="char-counter" aria-live="polite">0 / 30 characters</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="btn btn-submit">
+            Submit Contributor Application
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <aside id="did-you-know">
+    <h2>Did you know?</h2>
+    <p>The Enigma machine had roughly 159 quintillion possible settings, yet the biggest flaw the codebreakers exploited was not the math &mdash; it was operators reusing predictable messages like weather reports.</p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 Rabbi Muhammad Aman</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
