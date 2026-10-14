@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join | Cipher Machines Museum</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="branding">
+        <p class="site-title">Cipher Machines</p>
+        <p class="tagline">A Museum of Historical Cryptography</p>
+      </div>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="machines.html" class="nav-link">The Collection</a></li>
+          <li><a href="join.html" class="nav-link" aria-current="page">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1">
+    <h1>Become a member</h1>
+    <p class="lead">Members get early notice of new exhibits and talks. All fields are required.</p>
+
+    <div id="confirmation" class="confirmation" role="status" tabindex="-1" hidden></div>
+    <p id="form-status" class="form-status" aria-live="polite"></p>
+
+    <form id="join-form" class="join-form" novalidate>
+      <div class="field">
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" name="fullName" required minlength="2"
+               autocomplete="name" aria-describedby="full-name-error">
+        <p id="full-name-error" class="error"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email"
+               aria-describedby="email-hint email-error">
+        <p id="email-hint" class="hint">For example, ada@example.com</p>
+        <p id="email-error" class="error"></p>
+      </div>
+
+      <div class="field">
+        <label for="member-type">Member type</label>
+        <select id="member-type" name="memberType" required aria-describedby="member-type-error">
+          <option value="">Choose a member type</option>
+          <option value="Student">Student</option>
+          <option value="Researcher">Researcher</option>
+          <option value="Enthusiast">Enthusiast</option>
+          <option value="Educator">Educator</option>
+        </select>
+        <p id="member-type-error" class="error"></p>
+      </div>
+
+      <div class="field">
+        <label for="favourite-machine">Favourite machine</label>
+        <select id="favourite-machine" name="favouriteMachine" required
+                aria-describedby="favourite-machine-error">
+          <option value="">Choose a machine</option>
+        </select>
+        <p id="favourite-machine-error" class="error"></p>
+      </div>
+
+      <div class="field">
+        <label for="years">Years of interest</label>
+        <input type="number" id="years" name="years" required min="0" max="80" step="1"
+               inputmode="numeric" aria-describedby="years-hint years-error">
+        <p id="years-hint" class="hint">A whole number from 0 to 80.</p>
+        <p id="years-error" class="error"></p>
+      </div>
+
+      <div class="field">
+        <label for="reason">Why you are joining</label>
+        <textarea id="reason" name="reason" rows="5" required minlength="40"
+                  aria-describedby="reason-counter reason-error"></textarea>
+        <p id="reason-counter" class="counter" aria-live="polite">0 of 40 characters minimum</p>
+        <p id="reason-error" class="error"></p>
+      </div>
+
+      <button type="submit" class="button">Submit application</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Rabbi Muhammad Aman &middot; WAS500 Assignment 01</p>
+    </div>
+  </footer>
+</body>
+</html>

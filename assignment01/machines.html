@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Collection | Cipher Machines Museum</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="branding">
+        <p class="site-title">Cipher Machines</p>
+        <p class="tagline">A Museum of Historical Cryptography</p>
+      </div>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="machines.html" class="nav-link" aria-current="page">The Collection</a></li>
+          <li><a href="join.html" class="nav-link">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1">
+    <h1>The Collection</h1>
+    <p class="lead">Six machines, from a Spartan rod to an electronic codebreaker. Select a card, or
+    Tab to its button and press Enter or Space, to read its full description.</p>
+
+    <div class="filter-bar">
+      <label for="era-filter">Show machines from</label>
+      <select id="era-filter" name="era">
+        <option value="all">All periods</option>
+      </select>
+      <p id="filter-status" class="filter-status" aria-live="polite"></p>
+    </div>
+
+    <div id="gallery" class="gallery">
+      <noscript><p>The collection needs JavaScript to display.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Rabbi Muhammad Aman &middot; WAS500 Assignment 01</p>
+    </div>
+  </footer>
+</body>
+</html>

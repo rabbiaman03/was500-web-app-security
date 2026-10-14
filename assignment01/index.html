@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Cipher Machines Museum</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="branding">
+        <h1 class="site-title">Cipher Machines</h1>
+        <p class="tagline">A Museum of Historical Cryptography</p>
+      </div>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+          <li><a href="machines.html" class="nav-link">The Collection</a></li>
+          <li><a href="join.html" class="nav-link">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1">
+    <section class="intro" aria-labelledby="intro-heading">
+      <h2 id="intro-heading">Why cipher machines matter</h2>
+      <p>
+        For the vast majority of human history, maintaining the confidentiality of a message
+        involved placing one’s trust in someone holding pen and paper and following the system
+        flawlessly. Fatigue, shortcut-taking, and redundancy in language are precisely what
+        cryptographers seek out, which is why cipher machines were invented to rid the system of
+        its human frailties. A rod, a disc, or a set of rotors will follow the same rule over
+        and over again without fail, and follow much more complicated ones that cannot be done
+        by hand.
+      </p>
+      <p>
+        This collection of machines follows the concept through more than two millennia, from
+        the leather strip of Sparta to the electronic code-breaking machine with thousands of
+        valves. Each machine built upon the flaws in the previous machine and was ultimately
+        outsmarted by a hacker who uncovered something about the system that its designers had
+        overlooked. This rivalry between designers and hackers led to genuine developments in
+        both math and engineering. The breaking of German teleprinter codes in the Second World
+        War was the inspiration for one of the earliest programmable electronic computers.
+        Modern cryptography methods which protect our online banking and private communications
+        have learned the lessons from these machines: secrecy should reside in the key, not the
+        method.
+      </p>
+    </section>
+
+    <section class="feature" aria-labelledby="feature-heading">
+      <h2 id="feature-heading" class="visually-hidden">Featured principle</h2>
+      <div class="rotor" aria-hidden="true">
+        <div class="rotor-ring">
+          <div class="rotor-core">A&#8594;Q</div>
+        </div>
+      </div>
+      <figure class="feature-quote">
+        <blockquote>
+          <p>The system must not require secrecy, and it must be able to fall into the hands of the
+          enemy without inconvenience.</p>
+        </blockquote>
+        <figcaption>Auguste Kerckhoffs, <cite>La cryptographie militaire</cite> (1883), translated
+        from the French</figcaption>
+      </figure>
+    </section>
+
+    <section class="previews" aria-labelledby="previews-heading">
+      <h2 id="previews-heading">From the collection</h2>
+      <div class="preview-grid">
+        <article class="preview-card">
+          <h3>Scytale</h3>
+          <p class="meta">c. 7th century BC &middot; Ancient Sparta</p>
+          <p>A strip wound around a rod: the oldest transposition device on record.</p>
+          <a href="machines.html#machine-scytale">Read about the Scytale</a>
+        </article>
+        <article class="preview-card">
+          <h3>Enigma</h3>
+          <p class="meta">1920s&ndash;1945 &middot; German military</p>
+          <p>Stepping rotors that changed the substitution with every key press.</p>
+          <a href="machines.html#machine-enigma">Read about Enigma</a>
+        </article>
+        <article class="preview-card">
+          <h3>Colossus</h3>
+          <p class="meta">1943 &middot; Bletchley Park</p>
+          <p>An electronic machine built to find the wheel settings of the Lorenz cipher.</p>
+          <a href="machines.html#machine-colossus">Read about Colossus</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Rabbi Muhammad Aman &middot; WAS500 Assignment 01</p>
+    </div>
+  </footer>
+</body>
+</html>

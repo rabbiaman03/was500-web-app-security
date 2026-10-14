@@ -1,0 +1,545 @@
+/* ==========================================================
+   Cipher Machines Museum — shared stylesheet
+   Mobile-first: base rules target narrow screens,
+   min-width media queries add layout at 768px and 1280px.
+   ========================================================== */
+
+:root {
+  --ink: #1d1f24;
+  --muted: #4a4f59;
+  --paper: #faf7f0;
+  --surface: #ffffff;
+  --navy: #14213d;
+  --brass: #b8862b;
+  --brass-light: #f1d79a;
+  --focus: #1a5fd0;
+  --error: #b00020;
+  --success: #1b6e3a;
+  --border: #d8d2c4;
+  --radius: 0.5rem;
+  --measure: 72rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+a {
+  color: var(--focus);
+}
+
+/* ---------- Focus and skip link ---------- */
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.5rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: #ffdd00;
+  color: #000;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Layout container ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main.container {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.lead {
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+/* ---------- Header and navigation (Flexbox) ---------- */
+
+.site-header {
+  background: var(--navy);
+  color: #fff;
+  border-bottom: 4px solid var(--brass);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--brass-light);
+  font-size: 0.95rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link:focus-visible {
+  outline-color: #ffdd00;
+}
+
+/* Current page: underline bar + bold, not colour alone */
+.nav-link[aria-current="page"] {
+  font-weight: 700;
+  border-bottom-color: var(--brass);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Home: introduction ---------- */
+
+.intro p {
+  max-width: 65ch;
+}
+
+/* ---------- Home: feature area (CSS rotor + quotation) ---------- */
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--radius);
+}
+
+.rotor {
+  width: 10rem;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 0.6rem;
+  background:
+    repeating-conic-gradient(var(--brass) 0deg 4deg, transparent 4deg 13.85deg),
+    radial-gradient(circle, #2b3a5c 60%, #0b1428 100%);
+  box-shadow: 0 0 0 4px var(--brass);
+}
+
+.rotor-ring {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #3a4b70 0%, #1c2947 70%);
+  border: 3px dashed var(--brass-light);
+}
+
+.rotor-core {
+  display: grid;
+  place-items: center;
+  width: 55%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--brass);
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rotor-ring {
+    animation: turn 24s linear infinite;
+  }
+}
+
+@keyframes turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.feature-quote {
+  margin: 0;
+}
+
+.feature-quote blockquote {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.feature-quote blockquote p::before {
+  content: "\201C";
+}
+
+.feature-quote blockquote p::after {
+  content: "\201D";
+}
+
+.feature-quote figcaption {
+  margin-top: 0.75rem;
+  color: var(--brass-light);
+}
+
+/* ---------- Home: preview cards (Grid) ---------- */
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.preview-card,
+.machine-card {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--brass);
+  border-radius: var(--radius);
+}
+
+.preview-card h3 {
+  margin-top: 0;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Collection: filter bar (Flexbox) ---------- */
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.filter-bar label {
+  font-weight: 700;
+}
+
+.filter-status {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ---------- Collection: gallery (Grid) ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.machine-card {
+  cursor: pointer;
+}
+
+.machine-card:hover {
+  border-color: var(--brass);
+}
+
+.machine-card h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.machine-card.is-expanded {
+  box-shadow: 0 0 0 2px var(--brass);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.facts dt {
+  font-weight: 700;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.card-toggle,
+.button {
+  padding: 0.6rem 1.1rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.card-toggle:hover,
+.button:hover {
+  background: #23345c;
+}
+
+/* Arrow shows state as well as the button text */
+.card-toggle::after {
+  content: " \25BE";
+}
+
+.card-toggle[aria-expanded="true"]::after {
+  content: " \25B4";
+}
+
+.description {
+  margin-bottom: 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
+/* ---------- Join: form ---------- */
+
+.join-form {
+  max-width: 40rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid #767676;
+  border-radius: var(--radius);
+}
+
+.hint,
+.counter,
+.error {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hint,
+.counter {
+  color: var(--muted);
+}
+
+/* Invalid: red, thick dashed border, and an "Error:" text message */
+.field.is-invalid input,
+.field.is-invalid select,
+.field.is-invalid textarea {
+  border: 3px dashed var(--error);
+}
+
+.error {
+  color: var(--error);
+  font-weight: 700;
+}
+
+/* Valid: green, solid border, and a "✓ Looks good" label suffix */
+.field.is-valid input,
+.field.is-valid select,
+.field.is-valid textarea {
+  border-color: var(--success);
+}
+
+.field.is-valid label::after {
+  content: " \2713 Looks good";
+  color: var(--success);
+  font-weight: 400;
+}
+
+.form-status {
+  margin: 0 0 1rem;
+  color: var(--error);
+  font-weight: 700;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.confirmation {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #e6f4ea;
+  color: var(--success);
+  border: 2px solid var(--success);
+  border-left-width: 8px;
+  border-radius: var(--radius);
+  font-weight: 700;
+}
+
+.confirmation::before {
+  content: "\2713  ";
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 1.25rem 0;
+  background: var(--navy);
+  color: #fff;
+  border-top: 4px solid var(--brass);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ==========================================================
+   768px and up: navigation in a row, multi-column layouts
+   ========================================================== */
+
+@media (min-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .feature {
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filter-bar {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .filter-status {
+    margin-left: auto;
+  }
+}
+
+/* ==========================================================
+   1280px and up: larger type and spacing; content stays
+   within --measure instead of spanning the window
+   ========================================================== */
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  main.container {
+    padding-top: 2.5rem;
+  }
+
+  .rotor {
+    width: 13rem;
+  }
+
+  .feature-quote blockquote {
+    font-size: 1.4rem;
+  }
+}

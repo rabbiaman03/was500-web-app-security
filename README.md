@@ -28,6 +28,7 @@ Coursework from **WAS500 (Fall 2026, Seneca Polytechnic)**. Each lab extends **C
 | 03 | JavaScript basics and interactivity | Type coercion, scope and hoisting pitfalls; debugging | [Report](lab03/README.md) | [Open](https://rabbiaman03.github.io/was500-web-app-security/lab03/) |
 | 04 | DOM manipulation and events | **XSS:** script injection through `innerHTML` vs safe `textContent` | [Report](lab04/README.md) | [Open](https://rabbiaman03.github.io/was500-web-app-security/lab04/) |
 | 05 | Client-side validation and UX | **Bypassing HTML5 validation in DevTools**: why the server must always validate | [Report](lab05/README.md) | [Open](https://rabbiaman03.github.io/was500-web-app-security/lab05/) |
+| **A1** | **Assignment 1: Cipher Machines museum.** A 3-page site with a data-driven gallery, filters and a validated membership form | Accessible components (`aria-expanded`), strict input validation, zero W3C errors | [Report](assignment01/README.md) | [Open](https://rabbiaman03.github.io/was500-web-app-security/assignment01/) |
 
 ## 🖼️ Screenshots
 
