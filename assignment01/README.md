@@ -6,7 +6,7 @@
 
 ## What I built (summary)
 
-A three-page, responsive and accessible museum site about six historical cipher machines (Enigma, Lorenz and others), built with plain HTML, CSS and JavaScript and **no frameworks or image files**.
+A three-page, responsive and accessible museum site about six historical cipher machines, from the ancient Scytale to Enigma, the Lorenz SZ42 and Colossus, built with plain HTML, CSS and JavaScript and **no frameworks or image files**.
 
 | Area | What I did |
 |---|---|
