@@ -1,0 +1,51 @@
+[
+  {
+    "id": "9160c9c1-d0a0-4b23-bd00-d10bd28dda24",
+    "fullName": "Alan Turing",
+    "email": "alan.turing@myseneca.ca",
+    "yearOfStudy": 3,
+    "interest": "Cryptanalysis",
+    "joinedAt": "2026-11-10T20:25:26.873Z"
+  },
+  {
+    "id": "2f1a1176-4afb-475a-b032-452450272c81",
+    "fullName": "Claude E. Shannon",
+    "email": "c.shannon@myseneca.ca",
+    "yearOfStudy": 5,
+    "interest": "Information Theory",
+    "joinedAt": "2026-11-10T20:25:27.020Z",
+    "updatedAt": "2026-11-10T20:25:29.051Z"
+  },
+  {
+    "id": "14788a72-e1bb-4a35-a30b-d1f74367cc24",
+    "fullName": "Whitfield Diffie",
+    "email": "diffie@myseneca.ca",
+    "yearOfStudy": 2,
+    "interest": "Public-Key Cryptography",
+    "joinedAt": "2026-11-10T20:25:27.140Z"
+  },
+  {
+    "id": "607c8956-88b4-405d-a703-4d4c110cbbcb",
+    "fullName": "Elizebeth Friedman",
+    "email": "friedman@myseneca.ca",
+    "yearOfStudy": 5,
+    "interest": "Cryptanalysis",
+    "joinedAt": "2026-11-10T20:25:27.256Z"
+  },
+  {
+    "id": "8edc7d79-0fcf-4ea7-b58f-2947c9fad0f5",
+    "fullName": "Marian Rejewski",
+    "email": "rejewski@myseneca.ca",
+    "yearOfStudy": 6,
+    "interest": "Cryptanalysis",
+    "joinedAt": "2026-11-10T20:25:27.478Z"
+  },
+  {
+    "id": "c8fc6cc8-a743-4533-a428-97c1c15425d4",
+    "fullName": "Ralph Merkle",
+    "email": "merkle@myseneca.ca",
+    "yearOfStudy": 3,
+    "interest": "Public-Key Cryptography",
+    "joinedAt": "2026-11-10T20:25:27.587Z"
+  }
+]
