@@ -9,6 +9,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
 ![Accessibility](https://img.shields.io/badge/a11y-keyboard_audited-success)
 
 **[▶ Live demo](https://rabbiaman03.github.io/was500-web-app-security/)**
@@ -32,6 +33,7 @@ Coursework from **WAS500 (Fall 2026, Seneca Polytechnic)**. Each lab extends **C
 | 05 | Client-side validation and UX | **Bypassing HTML5 validation in DevTools**: why the server must always validate | [Report](lab05/README.md) | [Open](https://rabbiaman03.github.io/was500-web-app-security/lab05/) |
 | 06 | **Node.js server from scratch:** routing, file I/O, blocking vs non-blocking | **Server-side validation:** tampered requests get rejected with `400`; passwords never stored | [Report](lab06/README.md) | Run locally (`node server.js`) |
 | 07 | **Express REST API:** CRUD under `/api/v1`, middleware stack, filtering, sorting and pagination | **`helmet`, CORS and rate limiting (`429`)**, validation that rejects unexpected fields, no stack traces in production | [Report](lab07/README.md) | Run locally (`npm run dev`) |
+| 08 | **MongoDB and Mongoose:** data modelling (embed vs reference), shell CRUD, a Mongoose schema with validation | **Layers of validation:** the shell accepts any shape, Mongoose rejects bad documents in Node, a unique index is enforced by the database; connection string kept in `.env` | [Report](lab08/README.md) | Run locally (`npm run seed`) |
 | **A1** | **Assignment 1: Cipher Machines museum.** A 3-page site with a data-driven gallery, filters and a validated membership form | Accessible components (`aria-expanded`), strict input validation, zero W3C errors | [Report](assignment01/README.md) | [Open](https://rabbiaman03.github.io/was500-web-app-security/assignment01/) |
 
 ## 🖼️ Screenshots
